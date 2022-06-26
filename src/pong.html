@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                opacity: 1;
+                background-color: rgb(41, 41, 36);
+                -webkit-user-select: none; /* Chrome/Safari */        
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* IE10+ */
+            }
+            button{
+                display: none
+            }
+        </style>
+        <script src="svgelement.js"></script>
+        <script src="observable.js"></script>
+        <script src="pong.js"></script>
+    </head>
+    <body>
+        <h1>Pong by Ming Siew
+        </h1>
+        <svg id="canvas" width="700" height="580">
+            <image id = "mainMenu" x="0" y="0" width="700" height="580" xlink:href="pongBackdrop.jpg" preserveAspectRatio="none" ></image>
+            <image id = "start" x="220" y="200" width="250" height="250" xlink:href="start.png" preserveAspectRatio="none"></image>
+            <image id = "arcade" x="220" y="400" width="250" height="50" xlink:href="arcade.png" preserveAspectRatio="none"></image>
+            <style>
+                    .heavy { font: bold 80px sans-serif; }
+                    .small { font: bold 50px sans-serif; }
+            </style>
+            <text  id="cScore" x="220" y="100" fill="blue" class="heavy" display = "none">00</text>
+            <text  id="comp" x="100" y="550" fill="blue" class="heavy" display = "none">Comp</text> 
+            <text  id="pScore" x="390" y="100" fill="blue" class="heavy" display = "none">00</text>
+            <text  id="playa" x="370" y="550" fill="blue" class="heavy" display = "none">Playa</text> 
+            <text  id="aScore" x="300" y="100" fill="blue" class="heavy" display = "none">00</text>
+            <text  id="instruction" x="150" y="200" fill="blue" class="small" display = "none">Get atleast 11 to win</text>
+            <text  id="result" x="90" y="340" fill="blue" class="heavy" > </text> 
+        </svg>
+    </body>
+</html>
